@@ -50,10 +50,12 @@ A person intending to purchase a product at an auction..
 
 [Seller](#ac1):
 * [UC1](#uc1): Offering a product at an auction
-* ...
+* [UC2](#uc2): Transfering a product to the Buyer
 
 [Buyer](#ac2):
-* ...
+* [BR1](#br1): Offering a bid higher than the currently highest bid
+* [BR2](#br2): Winning an auction
+* [BR3](#br3): Transfering an amount of money to the Seller
 
 ---
 <a id="uc1"></a>
@@ -77,17 +79,20 @@ A person intending to purchase a product at an auction..
 ---
 
 <a id="uc2"></a>
-### UC2: ...
+### UC2: Transfering a product to the Buyer
 
-**Actors:** [Seller](#ac1), [Buyer](#ac2), ...
+**Actors:** [Seller](#ac1), [Buyer](#ac2)
 
 **Main scenario:**
-1. ...
+1. System asks [Buyer](#act2), who won the auction, for information about delivery (method of reception, addres, etc)
+2. System transmits delivery details to [Seller](#act1)
+3. [Seller](act#1) sends the parcel
 
 **Alternative scenarios:** 
 
-1.A. ...
-* 4.A.1. ...
+1.A. Incomplete addres has been entered.
+* 1.A.1. informs about incorrectly entered data.
+* 2.A.2. Continue at step 1.
 
 ---
 
