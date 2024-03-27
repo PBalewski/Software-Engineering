@@ -84,9 +84,9 @@ A person intending to purchase a product at an auction..
 **Actors:** [Seller](#ac1), [Buyer](#ac2)
 
 **Main scenario:**
-1. System asks [Buyer](#act2), who won the auction, for information about delivery (method of reception, addres, etc)
-2. System transmits delivery details to [Seller](#act1)
-3. [Seller](act#1) sends the parcel
+1. System asks [Buyer](#act2), who won the auction, for information about delivery (method of reception, addres, etc).
+2. System transmits delivery details to [Seller](#act1).
+3. [Seller](act#1) sends the parcel.
 
 **Alternative scenarios:** 
 
@@ -95,6 +95,27 @@ A person intending to purchase a product at an auction..
 * 2.A.2. Continue at step 1.
 
 ---
+---
+<a id="br1"></a>
+### BR1: Offering a bid higher than the currently highest bid
+
+**Actors:** [Buyer](#ac2)
+
+**Main scenario:**
+1. [Buyer](#ac2) reports to the system the willingness to actively participate in auction.
+2. System asks for data about the amount of money.
+3. [Buyer](#ac2) provides data about the amount of money.
+4. System verifies if offer is higher by at least EUR 1.00 than currently biggest offer.
+5. System informs that the offer has been succesfully accpted and is the new current winning offer.
+
+**Alternative scenarios:** 
+
+4.A. Offer that is not bigger than at least EUR 1.00 has been entered.
+* 4.A.1. informs about not sufficiently big offer.
+* 4.A.2. Continue at step 2.
+
+---
+
 
 ## Business objects (also known as domain or IT objects)
 
