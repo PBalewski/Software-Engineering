@@ -111,8 +111,38 @@ A person intending to purchase a product at an auction..
 **Alternative scenarios:** 
 
 4.A. Offer that is not bigger than at least EUR 1.00 has been entered.
-* 4.A.1. informs about not sufficiently big offer.
+* 4.A.1. informs that offer is not sufficiently high.
 * 4.A.2. Continue at step 2.
+
+---
+
+<a id="br2"></a>
+### BR2: Winning an auction
+**Actors:** [Buyer](#ac2)
+
+**Main scenario:**
+1. [Buyer](#ac2) offers a bid higher than the currently highest bid ([BR1](#br1))
+2. Auction ends (time expires), [Buyer](#ac2) wins an auction.
+
+**Alternative scenarios:** 
+
+2.A. Auction ends but the final highest offer wasn't fold by [Buyer](#ac2) - he lose an auction.
+* 2.A.1. End of use case.
+
+---
+
+<a id="br3"></a>
+### BR3: Transfering an amount of money to [Seller](act#1) 
+**Actors:** [Buyer](#ac2), [Seller](act#1)
+
+**Main scenario:**
+1. [Buyer](#ac2) offers a bid higher than the currently highest bid ([BR1](#br1))
+2. Auction ends (time expires), [Buyer](#ac2) wins an auction.
+
+**Alternative scenarios:** 
+
+2.A. Auction ends but the final highest offer wasn't fold by [Buyer](#ac2) - he lose an auction.
+* 2.A.1. End of use case.
 
 ---
 
