@@ -41,7 +41,7 @@ A person offering goods at an auction.
 <a id="ac2"></a>
 ### AC2: Buyer
 
-A person intending to purchase a product at an auction..
+A person intending to purchase a product at an auction.
 
 
 ## User level use cases
@@ -122,30 +122,28 @@ A person intending to purchase a product at an auction..
 
 **Main scenario:**
 1. [Buyer](#ac2) offers a bid higher than the currently highest bid ([BR1](#br1))
-2. Auction ends (time expires), [Buyer](#ac2) wins an auction.
+2. Auction ends (time expires), [Buyer's](#ac2) offer is the highest submited - he wins an auction.
 
 **Alternative scenarios:** 
 
-2.A. Auction ends but the final highest offer wasn't fold by [Buyer](#ac2) - he lose an auction.
+1.A. System informs that someone has submitted higher offer. [Buyer](#ac2) can now submits higher offer or fold.
+* 1.A.1. If [Buyer](#ac2) folds - end of use case.
+* 1.A.2. Elswhere [Buyer](#ac2) offers a bid higher than the currently highest bid ([BR1](#br1)).
+
+2.A. Auction ends but the final highest offer wasn't submited by [Buyer](#ac2) - he lose an auction.
 * 2.A.1. End of use case.
 
 ---
 
 <a id="br3"></a>
-### BR3: Transfering an amount of money to [Seller](act#1) 
+### BR3: Transfering an amount of money to the Seller.
 **Actors:** [Buyer](#ac2), [Seller](act#1)
 
 **Main scenario:**
-1. [Buyer](#ac2) offers a bid higher than the currently highest bid ([BR1](#br1))
-2. Auction ends (time expires), [Buyer](#ac2) wins an auction.
-
-**Alternative scenarios:** 
-
-2.A. Auction ends but the final highest offer wasn't fold by [Buyer](#ac2) - he lose an auction.
-* 2.A.1. End of use case.
+1. System informs [Buyer](#ac2) about [Seller's](act#1) bank account details.
+2. [Buyer](#ac2) makes a transfer.
 
 ---
-
 
 ## Business objects (also known as domain or IT objects)
 
@@ -176,6 +174,6 @@ Auction is won by [Buyer](#ac2) who submitted the highest bid before the end of 
 | Use case                                  | Auction | Product | ... |
 | ----------------------------------------- | ------- | ------- | --- |
 | UC1: Offering a product at an auction     |    C    |    C    | ... |
-| ???                                       |   ...   |   ...   | ... |
+| UC2: Transfering a product to the Buyer                                       |   ...   |   ...   | ... |
 
 
