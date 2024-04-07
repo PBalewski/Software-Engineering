@@ -95,55 +95,6 @@ A person intending to purchase a product at an auction.
 * 2.A.2. Continue at step 1.
 
 ---
----
-<a id="br1"></a>
-### BR1: Offering a bid higher than the currently highest bid
-
-**Actors:** [Buyer](#ac2)
-
-**Main scenario:**
-1. [Buyer](#ac2) reports to the system the willingness to actively participate in auction.
-2. System asks for data about the amount of money.
-3. [Buyer](#ac2) provides data about the amount of money.
-4. System verifies if offer is higher by at least EUR 1.00 than currently biggest offer.
-5. System informs that the offer has been succesfully accpted and is the new current winning offer.
-
-**Alternative scenarios:** 
-
-4.A. Offer that is not bigger than at least EUR 1.00 has been entered.
-* 4.A.1. informs that offer is not sufficiently high.
-* 4.A.2. Continue at step 2.
-
----
-
-<a id="br2"></a>
-### BR2: Winning an auction
-**Actors:** [Buyer](#ac2)
-
-**Main scenario:**
-1. [Buyer](#ac2) offers a bid higher than the currently highest bid ([BR1](#br1))
-2. Auction ends (time expires), [Buyer's](#ac2) offer is the highest submited - he wins an auction.
-
-**Alternative scenarios:** 
-
-1.A. System informs that someone has submitted higher offer. [Buyer](#ac2) can now submits higher offer or fold.
-* 1.A.1. If [Buyer](#ac2) folds - end of use case.
-* 1.A.2. Elswhere [Buyer](#ac2) offers a bid higher than the currently highest bid ([BR1](#br1)).
-
-2.A. Auction ends but the final highest offer wasn't submited by [Buyer](#ac2) - he lose an auction.
-* 2.A.1. End of use case.
-
----
-
-<a id="br3"></a>
-### BR3: Transfering an amount of money to the Seller.
-**Actors:** [Buyer](#ac2), [Seller](act#1)
-
-**Main scenario:**
-1. System informs [Buyer](#ac2) about [Seller's](act#1) bank account details.
-2. [Buyer](#ac2) makes a transfer.
-
----
 
 ## Business objects (also known as domain or IT objects)
 
@@ -167,13 +118,17 @@ Bidding at auction requires submitting an amount higher than current by a minimu
 
 Auction is won by [Buyer](#ac2) who submitted the highest bid before the end of the auction (time expires).
 
+<a id="br3"></a>
+### BR2: Transfering an amount of money to the Seller
+
+[Buyer](#ac2) transfers declared amount of money to the [Seller](#act1).
 
 ## CRUDL Matrix
 
 
-| Use case                                  | Auction | Product | ... |
+| Use case                                  | Auction | Product | Transaction details |
 | ----------------------------------------- | ------- | ------- | --- |
-| UC1: Offering a product at an auction     |    C    |    C    | ... |
-| UC2: Transfering a product to the Buyer                                       |   ...   |   ...   | ... |
+| UC1: Offering a product at an auction     |    C    |    C    | - |
+| UC2: Transfering a product to the Buyer   |   R, D  |    U    | R, U |
 
 
