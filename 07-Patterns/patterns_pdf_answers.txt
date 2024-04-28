@@ -1,0 +1,22 @@
+Task 1.
+1. Decorator
+2. Component
+3. Decorator
+4. InputStream in
+5. InputStream in, Checksum cksum
+6. Checksum() {
+        return cksum;
+    }
+7. File
+8. Concrete component
+9. Concrete decorator
+Task 3.
+10. Composite
+11. Component
+12. Observer
+13. Concrete Subject
+14. Listener(MouseListener)
+Listener(ActionListener)
+15. MouseListener
+16. ActionListener
+17. Observer
