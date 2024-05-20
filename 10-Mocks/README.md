@@ -3,4 +3,4 @@ We can use Mockito to create the mock object and set up the expected return valu
 Utilize Mockito's InOrder class to check that connect(), queryAll(), and close() methods are called
 in the specified sequence. This ensures the loadExpenses method interacts with the database in the correct order.
 5.1
-No
+Yes
